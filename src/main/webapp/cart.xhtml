@@ -1,0 +1,13 @@
+<ui:composition xmlns="http://www.w3.org/1999/xhtml"
+                xmlns:h="http://java.sun.com/jsf/html"
+                xmlns:ui="http://java.sun.com/jsf/facelets"
+                xmlns:f="http://java.sun.com/jsf/core" template="template.xhtml">
+
+    <ui:define name="content">
+    	<h1>Shopping Cart:</h1>
+    	<ui:repeat var="pid" value="#{cart.productIds}">
+    		<h:outputText value="#{pid}" />
+    	</ui:repeat>
+    </ui:define>
+
+</ui:composition>

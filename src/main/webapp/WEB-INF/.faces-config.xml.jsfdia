@@ -1,7 +1,15 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <PROCESS model-entity="JSFProcess">
  <PROCESS-ITEM NAME="rules:#detail.xhtml" PATH="/detail.xhtml"
-  SHAPE="240,33,0,0" model-entity="JSFProcessGroup"/>
+  SHAPE="240,33,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#detail.xhtml:0" NAME="item"
+   PATH="/detail.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="catalog::#catalog.xhtml" NAME="output"
+    PATH="/catalog.xhtml" TARGET="rules:#catalog.xhtml" TITLE="catalog" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="added::#cart.xhtml" NAME="output1"
+    PATH="/cart.xhtml" TARGET="rules:#cart.xhtml" TITLE="added" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#catalog.xhtml" PATH="/catalog.xhtml"
   SHAPE="32,17,0,0" model-entity="JSFProcessGroup">
   <PROCESS-ITEM ID="rules:#catalog.xhtml:0" NAME="item"
@@ -10,4 +18,6 @@
     PATH="/detail.xhtml" TARGET="rules:#detail.xhtml" TITLE="detail" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#cart.xhtml" PATH="/cart.xhtml"
+  SHAPE="464,17,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>

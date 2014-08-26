@@ -4,9 +4,14 @@
                 xmlns:f="http://java.sun.com/jsf/core" template="template.xhtml">
 
     <ui:define name="content">
-    	<h:form id="detailForm">	
-    		This is detail page.
+    	<h:form id="detailForm">
+    		<h:inputHidden value="#{ph.productId}"/>
+    		<h1>#{ph.currentProduct.name}</h1>
+	    	<h:commandButton action="#{ph.addToCart}" value="Add to cart" />
     	</h:form>
+    	<br/>
+    	<br/>
+    	<h:commandButton action="catalog" value="Back to Catalog" />
     </ui:define>
 
 </ui:composition>
