@@ -2,6 +2,7 @@ package eshop;
 
 import java.io.Serializable;
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 
 import javax.enterprise.context.SessionScoped;
@@ -17,7 +18,10 @@ public class Cart implements Serializable{
 	}
 	
 	public void add(String pid){
-		productIds.add(pid);
+		if(!productIds.contains(pid)){			
+			productIds.add(pid);
+		}
+		Collections.sort(productIds);
 	}
 	
 	public List<String> getProductIds(){

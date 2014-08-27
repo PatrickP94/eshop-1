@@ -10,8 +10,12 @@
 			<from-outcome>detail</from-outcome>
 			<to-view-id>/detail.xhtml</to-view-id>
 		</navigation-case>
+		<navigation-case>
+			<from-outcome>login</from-outcome>
+			<to-view-id>/login.xhtml</to-view-id>
+		</navigation-case>
 	</navigation-rule>
-	
+
 	<navigation-rule>
 		<from-view-id>/detail.xhtml</from-view-id>
 		<navigation-case>
@@ -22,5 +26,26 @@
 			<from-outcome>added</from-outcome>
 			<to-view-id>/cart.xhtml</to-view-id>
 		</navigation-case>
+	</navigation-rule>
+
+	<navigation-rule>
+		<from-view-id>/cart.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>catalog</from-outcome>
+			<to-view-id>/catalog.xhtml</to-view-id>
+		</navigation-case>
+		<navigation-case>
+			<from-outcome>confirm</from-outcome>
+			<to-view-id>/confirm.xhtml</to-view-id>
+		</navigation-case>
+	</navigation-rule>
+	
+	<navigation-rule>
+		<from-view-id>/login.xhtml</from-view-id>
+		<navigation-case>
+			<from-outcome>loggedIn</from-outcome>
+			<to-view-id>/catalog.xhtml</to-view-id>
+		</navigation-case>
+		
 	</navigation-rule>
 </faces-config>

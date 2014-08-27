@@ -4,15 +4,8 @@
                 xmlns:f="http://java.sun.com/jsf/core" template="template.xhtml">
 
     <ui:define name="content">
-    	<h1>Shopping Cart:</h1>
-    	
-    	<ui:repeat var="pid" value="#{cart.productIds}">
-    		<li><h:outputText value="#{pid}" /></li><br/> 
-    	</ui:repeat>
-    	<h:form>
-    		<h:commandButton value="Back to Catalog" action="catalog" />
-    		<h:commandButton value="Confirm" action="confirm" />
-    	</h:form>
+    	<h1>Confirm:</h1>
+    	<p>You'll pay #{confirmService.total} with credit card #{confirmService.creditCardNo}</p>
     </ui:define>
 
 </ui:composition>

@@ -16,8 +16,27 @@
    PATH="/catalog.xhtml" model-entity="JSFProcessItem">
    <PROCESS-ITEM-OUTPUT ID="detail::#detail.xhtml" NAME="output"
     PATH="/detail.xhtml" TARGET="rules:#detail.xhtml" TITLE="detail" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="login::#login.xhtml" NAME="output1"
+    PATH="/login.xhtml" TARGET="rules:#login.xhtml" TITLE="login" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
  <PROCESS-ITEM NAME="rules:#cart.xhtml" PATH="/cart.xhtml"
-  SHAPE="464,17,0,0" model-entity="JSFProcessGroup"/>
+  SHAPE="464,17,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#cart.xhtml:0" NAME="item" PATH="/cart.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="catalog::#catalog.xhtml" NAME="output"
+    PATH="/catalog.xhtml" TARGET="rules:#catalog.xhtml" TITLE="catalog" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="confirm::#confirm.xhtml" NAME="output1"
+    PATH="/confirm.xhtml" TARGET="rules:#confirm.xhtml" TITLE="confirm" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#confirm.xhtml" PATH="/confirm.xhtml"
+  SHAPE="704,33,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#login.xhtml" PATH="/login.xhtml"
+  SHAPE="272,177,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#login.xhtml:0" NAME="item"
+   PATH="/login.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="loggedIn::#catalog.xhtml" NAME="output"
+    PATH="/catalog.xhtml" TARGET="rules:#catalog.xhtml" TITLE="loggedIn" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
 </PROCESS>
