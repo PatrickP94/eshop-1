@@ -6,7 +6,7 @@
     <ui:define name="content">
     	<h1>Login</h1>
     	<h:inputText value="#{loginRequest.username}" />
-    	<h:inputText value="#{loginRequest.password}" />
+    	<h:inputSecret value="#{loginRequest.password}" />
     	<h:commandButton value="Login" action="#{loginRequest.login()}" />
     </ui:define>
 

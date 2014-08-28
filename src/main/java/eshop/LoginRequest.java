@@ -1,7 +1,10 @@
 package eshop;
 
 import javax.enterprise.context.RequestScoped;
+import javax.faces.application.Application;
 import javax.faces.application.FacesMessage;
+import javax.faces.application.ViewHandler;
+import javax.faces.component.UIViewRoot;
 import javax.faces.context.FacesContext;
 import javax.inject.Inject;
 import javax.inject.Named;
@@ -35,6 +38,16 @@ public class LoginRequest {
 	public String login(){
 		if(username.equals("u1") && password.equals("p1")){
 			userHolder.setCurrentUser(new User("u1", "p1", "1234"));
+			String viewId = userHolder.getOriginalViewId();
+			if(viewId != null){
+				FacesContext context = FacesContext.getCurrentInstance();
+				Application app = context.getApplication();
+				ViewHandler viewHandler = app.getViewHandler();
+				UIViewRoot root = viewHandler.createView(context, viewId);
+				context.setViewRoot(root);
+				userHolder.setOriginalViewId(null);
+				return null;
+			}
 			return "loggedIn";
 		} else {
 			FacesContext context = FacesContext.getCurrentInstance();
