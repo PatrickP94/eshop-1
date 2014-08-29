@@ -9,6 +9,11 @@ import javax.inject.Named;
 @SessionScoped
 public class UserHolder implements Serializable {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -6095009690165268470L;
+	
 	private User currentUser;
 	private String originalViewId;
 

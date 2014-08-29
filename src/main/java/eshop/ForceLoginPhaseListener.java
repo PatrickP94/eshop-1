@@ -10,6 +10,11 @@ import javax.faces.event.PhaseListener;
 
 public class ForceLoginPhaseListener implements PhaseListener{
 	
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = -425282475849776893L;
+
 	public PhaseId getPhaseId(){
 		return PhaseId.RENDER_RESPONSE;
 	}
