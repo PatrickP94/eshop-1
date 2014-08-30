@@ -39,4 +39,26 @@
     PATH="/catalog.xhtml" TARGET="rules:#catalog.xhtml" TITLE="loggedIn" model-entity="JSFProcessItemOutput"/>
   </PROCESS-ITEM>
  </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:*" PATH="*" SHAPE="32,273,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:0" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="products::#products.xhtml" NAME="output"
+    PATH="/products.xhtml" TARGET="rules:#products.xhtml"
+    TITLE="products" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="home::#home.xhtml" NAME="output1"
+    PATH="/home.xhtml" TARGET="rules:#home.xhtml" TITLE="home" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#products.xhtml" PATH="/products.xhtml"
+  SHAPE="256,289,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#products.xhtml:0" NAME="item"
+   PATH="/products.xhtml" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="hotDeals::#hotdeals.xhtml" NAME="output"
+    PATH="/hotdeals.xhtml" TARGET="rules:#hotdeals.xhtml"
+    TITLE="hotDeals" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#home.xhtml" PATH="/home.xhtml"
+  SHAPE="256,433,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#hotdeals.xhtml" PATH="/hotdeals.xhtml"
+  SHAPE="464,273,0,0" model-entity="JSFProcessGroup"/>
 </PROCESS>
